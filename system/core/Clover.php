@@ -20,11 +20,8 @@ class Clover {
 
             // Getting the file path for checking if it exists.
 
-            $path = ROOT . '/app/controllers/' . $class . '.php';
+            require_once ROOT . '/app/controllers/' . $class . '.php';
 
-            if(file_exists($path)) {
-                require_once $path;
-            }
         });
     }
 
@@ -32,7 +29,7 @@ class Clover {
 
         // Getting controller name and making first letters capital.
 
-        $controller = ucwords($this->routes[0]);
+        $controller = ucfirst($this->routes[0]);
 
         // Storing the method name if it is called else assign null.
 
@@ -42,6 +39,12 @@ class Clover {
 
         $parameter = isset($this->routes[2]) ? $this->routes[2] : null;
         
+        // Including parent class of the below controller.
+
+        require_once ROOT . '/system/core/Controller.php';
+
+        $this->auto_load();
+
         // Instanitaing an object of the controller class.
 
         $obj = new $controller();
@@ -56,7 +59,7 @@ class Clover {
         // If method was called but the parameter was null.
 
         else {
-
+            
             $obj->$method();
         }
     }

@@ -1,2 +1,2 @@
 # Clover
-*Clover is an MVC Framework.*
+*Clover is a basic php MVC based framework.*

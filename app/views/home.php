@@ -8,5 +8,12 @@
 </head>
 <body>
     <h1>This is Home.</h1>
+    <form>
+        <select>
+            <?php foreach($params as $value): ?>
+                <option><?php echo $value; ?></option>
+            <?php endforeach; ?>
+        </select>
+    </form>
 </body>
 </html>

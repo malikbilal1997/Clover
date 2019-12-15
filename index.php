@@ -16,15 +16,11 @@
 
     // Requiring 'clover.php' that contain Clover class.
 
-    require_once ROOT . '/system/Clover.php';
+    require_once ROOT . '/system/core/Clover.php';
 
     // Initiating an object by passing 'url' as a param.
 
     $app = new Clover($url);
-
-    // Calling this method to load the controller class.
-
-    $app->auto_load();
 
     // Calling this method to start our web application.
 
