@@ -2,15 +2,17 @@
     
     class Home extends Controller {
         
+
         public function __construct() {
-    
+
+            $this->load_model('Home_model');
         }
 
         public function index() {
 
-            $params = array('Lahore', 'Karachi', 'Islamabad', 'Peshawar');
+            $result = $this->model->test();
+            $this->load_view('home', $result);
 
-            $this->view('home', $params);
         }
     }
 

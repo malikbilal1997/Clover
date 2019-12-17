@@ -8,7 +8,7 @@
 
     // Setting the name of default route of the website.
 
-    $default = '';
+    $default = 'home/index';
 
     // Storing the 'url' if it's set in the $_GET array.
 

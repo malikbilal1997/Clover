@@ -3,12 +3,32 @@
 
     class Controller {
 
-        // Method to load a view from views directory
+        protected $model;
 
-        protected function view($name, $params) {
+        // Method to load a view from views directory.
 
-            require_once ROOT .'/app/views/'.$name . '.php';
+        protected function load_view($name, $params = null) {
 
+            $path = ROOT .'/app/views/'.$name . '.php';
+
+            if(file_exists($path)) {
+
+                require_once $path;
+            }        
+        }
+        
+        // Method to load a model from model directory.
+
+        protected function load_model($name) {
+
+            $path = ROOT .'/app/models/'.$name . '.php';
+
+            if(file_exists($path)) {
+
+                require_once $path;
+
+                $this->model = new $name();
+            }
         }
     }
 ?>

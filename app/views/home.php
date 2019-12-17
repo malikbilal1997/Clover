@@ -11,7 +11,7 @@
     <form>
         <select>
             <?php foreach($params as $value): ?>
-                <option><?php echo $value; ?></option>
+                <option><?php echo $value['useremail']; ?></option>
             <?php endforeach; ?>
         </select>
     </form>

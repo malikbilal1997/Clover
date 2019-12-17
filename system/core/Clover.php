@@ -39,9 +39,10 @@ class Clover {
 
         $parameter = isset($this->routes[2]) ? $this->routes[2] : null;
         
-        // Including parent class of the below controller.
+        // Requiring parent class of controller and model.
 
         require_once ROOT . '/system/core/Controller.php';
+        require_once ROOT . '/system/core/Model.php';
 
         $this->auto_load();
 
