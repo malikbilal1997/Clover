@@ -1,5 +1,5 @@
 <?php
-    
+    // This is a demo code
     class Home extends Controller {
         
 
@@ -10,7 +10,7 @@
 
         public function index() {
 
-            $result = $this->model->test();
+            $result = $this->model->get_posts();
             $this->load_view('home', $result);
 
         }
