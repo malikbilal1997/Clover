@@ -4,10 +4,10 @@
     // Configuration Array for the project database.
     
     return array(
-        'hostname' => 'localhost', 
-        'dbuser' => 'root',
+        'hostname' => '', 
+        'dbuser' => '',
         'password' => '',
-        'dbname' => 'pakart'
+        'dbname' => ''
 );
 
 
