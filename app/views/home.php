@@ -1,3 +1,4 @@
+<!-- This is a demo code -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,13 +8,10 @@
     <title>Home</title>
 </head>
 <body>
-    <h1>This is Home.</h1>
-    <form>
-        <select>
-            <?php foreach($params as $value): ?>
-                <option><?php echo $value['useremail']; ?></option>
-            <?php endforeach; ?>
-        </select>
-    </form>
+    <h1>This is Home.</h1>  
+    <?php foreach($params as $value): ?>
+        <h1><?php echo $value['post_title']; ?></h1>
+        <p><?php echo $value['post_content']; ?></p>
+    <?php endforeach; ?>       
 </body>
 </html>
